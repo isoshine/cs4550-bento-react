@@ -5,7 +5,7 @@ import Bento from "./components/Bento";
 function App() {
   return (
     <div className="App container">
-       <Bento/>
+       <Bento />
     </div>
   );
 }

@@ -1,6 +1,8 @@
 import React from "react";
+import Results from "./Results";
 
-class SearchRecipe extends React.Component {
+
+class SearchKeyword extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -34,7 +36,7 @@ class SearchRecipe extends React.Component {
     render() {
         return (
             <div>
-                <h2>Search</h2>
+                <h2>Search by Keyword</h2>
                 <div className="input-group">
                     <input type="text"
                            value={this.state.keyword}
@@ -49,16 +51,7 @@ class SearchRecipe extends React.Component {
                 </div>
 
                 <div>
-                <ul className="list-group">
-                {
-                    this.state.recipes.map(
-                        (recipe, index) =>
-                            <li key={index} className="list-group-item">
-                                {recipe.title}
-                            </li>
-                    )
-                }
-                </ul>
+                    <Results recipes={this.state.recipes}/>
                 </div>
 
             </div>
@@ -66,4 +59,4 @@ class SearchRecipe extends React.Component {
     }
 }
 
-export default SearchRecipe;
+export default SearchKeyword;
