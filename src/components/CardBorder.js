@@ -1,7 +1,7 @@
 import React from "react";
 import posed, {PoseGroup} from 'react-pose';
 
-const CardContainer = posed.div({
+const CardBorder = posed.div({
     enter: {
         y: 0,
         opacity: 1,
@@ -20,4 +20,4 @@ const CardContainer = posed.div({
     },
 });
 
-export default CardContainer;
+export default CardBorder;

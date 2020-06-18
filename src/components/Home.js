@@ -8,13 +8,28 @@ const Home = () =>
                 <div className="bento-list list-group">
 
                     <Link className="bento-list-item list-group-item"
-                          to="/keyword">
-                        Search by Keyword
+                          to="/search">
+                        Search
+                    </Link>
+                    
+                    <Link className="bento-list-item list-group-item"
+                          to="/profile">
+                        Profile
                     </Link>
 
                     <Link className="bento-list-item list-group-item"
-                          to="/ingredient">
-                        Search by Ingredient
+                          to="/signup">
+                        Sign-up
+                    </Link>
+
+                    <Link className="bento-list-item list-group-item"
+                          to="/signin">
+                        Sign-in
+                    </Link>
+
+                    <Link className="bento-list-item list-group-item"
+                          to="/admin">
+                        User Admin Page
                     </Link>
                 </div>
             </div>;

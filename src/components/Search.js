@@ -1,9 +1,14 @@
 import React from "react";
+import SearchKeyword from "./SearchKeyword";
 
 class Search extends React.Component {
-    state = {
-        searchType: ""
-    };
+    render() {
+        return (
+            <div>
+                <SearchKeyword/>
+            </div>
+        )
+    }
 }
 
 export default Search;

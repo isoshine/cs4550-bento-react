@@ -10,7 +10,6 @@ class SearchKeyword extends React.Component {
             recipes: []
         }
     }
-
     keywordChanged = event =>
         this.setState({keyword: event.target.value});
 

@@ -1,11 +1,11 @@
 import React from "react";
 import posed, {PoseGroup} from 'react-pose';
-import CardContainer from "./CardContainer";
+import CardBorder from "./CardBorder";
 import Card from "./Card";
 
 const rowSize = 4;
 
-function RecipeGrid({recipes, setDrawer}) {
+export default function RecipeGrid({recipes, setDrawer}) {
     const grid = formatGrid(recipes);
     console.log(grid);
     const [isVisible, setIsVisible] = React.useState(false);
@@ -19,7 +19,7 @@ function RecipeGrid({recipes, setDrawer}) {
                         {grid.map((row, i) =>
                             <div style={{display: 'flex', flexDirection: 'row'}} key={i}>
                                 <PoseGroup>
-                                    {isVisible && row.map((recipe, j) => <CardContainer i={i * rowSize + j} key={j}><Card recipe={recipe} setDrawer={setDrawer} /></CardContainer>)}
+                                    {isVisible && row.map((recipe, j) => <CardBorder i={i * rowSize + j} key={j}><Card recipe={recipe} setDrawer={setDrawer} /></CardBorder>)}
                                 </PoseGroup>
                             </div>)}
                     </PoseGroup>
@@ -45,5 +45,3 @@ function formatGrid(recipes) {
     }
     return res;
 }
-
-export default RecipeGrid;

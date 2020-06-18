@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Bento from "./components/Bento";
+import Bento from "./Bento";
 
 function App() {
   return (
